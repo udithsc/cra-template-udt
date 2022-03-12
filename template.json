@@ -1,0 +1,56 @@
+{
+  "package": {
+    "dependencies": {
+      "@emotion/react": "^11.6.0",
+      "@emotion/styled": "^11.6.0",
+      "@mui/icons-material": "^5.2.0",
+      "@mui/lab": "^5.0.0-alpha.68",
+      "@mui/material": "^5.2.0",
+      "@reduxjs/toolkit": "^1.6.2",
+      "@testing-library/jest-dom": "^5.15.1",
+      "@testing-library/react": "^12.1.2",
+      "@testing-library/user-event": "^7.2.1",
+      "@testing-library/cypress": "^8.0.2",
+      "axios": "^0.24.0",
+      "dotenv": "^16.0.0",
+      "env-cmd": "^10.1.0",
+      "joi": "^17.5.0",
+      "jwt-decode": "^3.1.2",
+      "moment": "^2.29.1",
+      "prop-types": "^15.7.2",
+      "react-redux": "^7.2.6",
+      "react-router-dom": "^6.0.2",
+      "react-toastify": "^8.1.0"
+    },
+    "scripts": {
+      "e2e-test": "cypress open",
+      "lint": "eslint 'src/**/*.{js,jsx}' && stylelint src/**/*.css",
+      "fix": "eslint 'src/**/*.{js,jsx}' --fix && stylelint src/**/*.css --fix",
+      "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config .prettierrc.json ",
+      "lint-staged": "lint-staged --config .lintstagedrc.json",
+      "prepare": "husky install",
+      "coverage": "react-scripts test --coverage"
+    },
+    "devDependencies": {
+      "@commitlint/cli": "^16.2.1",
+      "@commitlint/config-conventional": "^16.2.1",
+      "axios-mock-adapter": "^1.20.0",
+      "cypress": "^9.3.1",
+      "eslint": "^8.6.0",
+      "eslint-config-airbnb": "^19.0.4",
+      "eslint-config-prettier": "^8.3.0",
+      "eslint-plugin-import": "^2.25.4",
+      "eslint-plugin-jsx-a11y": "^6.5.1",
+      "eslint-plugin-prettier": "^4.0.0",
+      "eslint-plugin-react": "^7.28.0",
+      "eslint-plugin-react-hooks": "^4.3.0",
+      "husky": "^7.0.4",
+      "lint-staged": "^12.3.4",
+      "prettier": "^2.5.1",
+      "react-test-renderer": "^17.0.2",
+      "stylelint": "^14.5.3",
+      "stylelint-config-prettier": "^9.0.3",
+      "stylelint-config-standard": "^25.0.0"
+    }
+  }
+}

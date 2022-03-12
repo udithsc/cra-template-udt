@@ -1,0 +1,25 @@
+{
+  "name": "cra-template-udt",
+  "version": "1.0.0",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "template"
+  ],
+  "description": "A template for React Redux App.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/udithsc/cra-template-udt.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=16"
+  },
+  "bugs": {
+    "url": "https://github.com/udithsc/cra-template-udt/issues"
+  },
+  "files": [
+    "template",
+    "template.json"
+  ]
+}
