@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Usage
 
 ```shell script
-npx create-react-app %PROJECT_NAME% --template (git-repo-path)
+npx create-react-app %PROJECT_NAME% --template udt
 ```
 
 `npx` command installs most recent stable version of CRA from npm. `--template` parameter points to this template, note that `cra-template-` prefix is omitted.
