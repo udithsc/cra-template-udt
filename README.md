@@ -1,11 +1,11 @@
 # cra-template-udt
 
-A template bootstrapped with [Create React App](https://github.com/facebook/create-react-app) (CRA) to build applications with **redux**, **eslint**, **pretier** and **stylelint** configurations.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TypeScript template.
 
 ## Usage
 
 ```shell script
-npx create-react-app %PROJECT_NAME% --template udt
+npx create-react-app %PROJECT_NAME% --template (git-repo-path)
 ```
 
 `npx` command installs most recent stable version of CRA from npm. `--template` parameter points to this template, note that `cra-template-` prefix is omitted.
@@ -30,26 +30,74 @@ npm start
 - Avoid errors and enforce conventions in styles with [stylelint](https://stylelint.io/).
 - Commit convention made easy with [Commitlint](https://commitlint.js.org/#/)
 - [Jest](https://jestjs.io/) and [react-testing-library](https://testing-library.com/docs/react-testing-library/intro) for unit testing.
-- [Cypres](https://www.cypress.io/) for E2E testing
-- with below useful utilities
-  - [Axios](https://axios-http.com/) - A Promise based HTTP client
-  - [Moment](https://momentjs.com/) - A JavaScript date library
+- [Cypres](https://www.cypress.io/) for End-to-end tests and integration testing
+- Additional useful utilities
+
+  - [Material React Table](https://www.material-react-table.com/) -for building powerful tables & datagrids with Material UI.
+  - [React Hook Form](https://react-hook-form.com/) - for building forms with validations.
   - [JOI](https://joi.dev/) - A Schema based data validator
+  - [React Toastify](https://fkhadra.github.io/react-toastify/introduction) - to add notifications to your app
 
-## Run Scripts
+## Available Scripts
 
-Inside the project directory run using `npm` or `yarn`:
+In the project directory, you can run:
 
-- `start` - runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-- `test` - launches the test runner in the interactive watch mode.
-- `build` - builds the app for production to the `build` folder.
-- `eject` - exposes content of `react-script` package
-- `lint` - lints project files according to [Airbnb](https://github.com/airbnb/javascript) — as part of their style guide — it provides an ESLint configuration that anyone can use and it is the standard.
-- `fix` - fix lints issues according to style guide set.
-- `format` - format the code with prettier
-- `lint-staged` - fix lints issues according to style guide set.
-- `coverage` - create a test coverage report
-- `prepare` - enable git hooks
+### `yarn start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `yarn test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `yarn build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+### `yarn lint`
+
+Lints project files according to [Airbnb](https://github.com/airbnb/javascript) — as part of their style guide — it provides an ESLint configuration that anyone can use and it is the standard.
+
+### `yarn lint-fix`
+
+Fix lints issues according to style guide set.
+
+### `yarn format`
+
+Format the code with prettier
+
+### `yarn lint-staged`
+
+Fix lints issues according to style guide set
+
+### `yarn coverage`
+
+Create a test coverage report.
+
+### `yarn prepare`
+
+Enable git hooks
 
 ## File Structure
 
@@ -58,14 +106,10 @@ Inside the project directory run using `npm` or `yarn`:
 ├── .env # dotenv config file
 ├── .eslintrc.json # eslint configurations
 ├── .commitlintrc.json # commitlint config file
-├── .lintstagedrc.json # lintstaged configurations
-├── .prettierignore # exclude files from formatting
 ├── .prettierrc.json # prettier configurations
 ├── .stylelintrc # stylelint configurations
 ├── Dockerfile
-├── .dockerignore
 ├── nginx.conf # nginx configurations
-├── package-lock.json
 ├── package.json
 ├── .gitignore
 ├── jsconfig.json # absolute path configurations
@@ -73,17 +117,17 @@ Inside the project directory run using `npm` or `yarn`:
 ├── public # public assets
 └── src
     ├── components # React components folder
+    ├── features # features folder
     ├── hooks # custom react hooks
     ├── pages
-    ├── resources
+    ├── resources #images and other project resources
     ├── store # redux store
     ├── styles
     ├── App.jsx # main component
-    ├── data.json # project configurations
     ├── index.css
     ├── index.js # entry point file
-    ├── protectedRoute.jsx
     └── setupTests.js # configuration to run jest tests
+    └── project.config.json # configuration to run jest tests
 ```
 
 ## Git Hooks
@@ -114,7 +158,7 @@ Real world examples can look like this:
 fix(server): send cors headers
 ```
 
-Common types according to [commitlint-config-conventional](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional#type-enum) can be build, ci, docs, feat, fix, refactor, revert, style, test
+Common types according to [commitlint-config-conventional](https://www.conventionalcommits.org/en/v1.0.0/) can be build, ci, docs, feat, fix, refactor, revert, style, test
 
 ## Code quality tools
 
@@ -128,9 +172,9 @@ ESLint is designed to be flexible and configurable for your use case. You can tu
 
 [Prettier](https://prettier.io/) is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary. `.prettierrc` file specify formatting configurations of this template.
 
-### stylelint
+### Stylelint
 
-Template includes [Stylelint](https://stylelint.io/), to check CSS/SASS/LESS files. It is using [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard) and [stylelint-config-prettier](https://github.com/prettier/stylelint-config-prettier) rule set. `.stylelintrc` file specify styling configurations of this template.
+Template includes [Stylelint](https://stylelint.io/), to check CSS/SASS/LESS files. It is using [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard) rule set. `.stylelintrc` file specify styling configurations of this template.
 
 ## State Management
 
@@ -149,7 +193,7 @@ This template uses [Jest](https://jestjs.io/) JavaScript test runner that lets y
 Unit Testing supported with [react-testing-library](https://testing-library.com/docs/react-testing-library/intro) that works with [Jest](https://github.com/facebook/jest). Refer the official docs about [running tests](https://create-react-app.dev/docs/running-tests/) for more information
 
 ```
-$ npm run test
+$ yarn run test
 ```
 
 ### Coverage
@@ -157,7 +201,7 @@ $ npm run test
 To set coverage this template uses Jest. Jest allow us to create reports in different format and set where we want to collect these reports from (or not collect them from), as well as ensure the coverageThreshold.Coverage report can be open using coverage/lcov-report/index.html file
 
 ```
-$ npm run coverage
+$ yarn run coverage
 ```
 
 ### E2E Testing
@@ -165,7 +209,7 @@ $ npm run coverage
 E2E testing provided by [Cypress](https://www.cypress.io/).
 
 ```
-$ npm run e2e-test
+$ yarn run e2e-test
 ```
 
 for more information about testing.

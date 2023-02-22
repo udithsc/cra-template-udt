@@ -1,12 +1,12 @@
 {
   "name": "cra-template-udt",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "keywords": [
     "react",
     "create-react-app",
     "template"
   ],
-  "description": "A template for React Redux App.",
+  "description": "A template for React Redux App with TypeScript",
   "repository": {
     "type": "git",
     "url": "https://github.com/udithsc/cra-template-udt.git"
